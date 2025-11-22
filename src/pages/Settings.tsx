@@ -68,7 +68,7 @@ const Settings = () => {
                                             <label className="block font-bold mb-2 text-sm">Full Name</label>
                                             <input
                                                 type="text"
-                                                defaultValue="Andres Lopez"
+                                                defaultValue="Andres Borja"
                                                 className="w-full px-4 py-2 brutal-border bg-white font-mono focus:outline-none focus:ring-4 focus:ring-brutal-yellow"
                                             />
                                         </div>
@@ -80,7 +80,7 @@ const Settings = () => {
                                             </label>
                                             <input
                                                 type="email"
-                                                defaultValue="andres@email.com"
+                                                defaultValue="andres@proton.dev"
                                                 className="w-full px-4 py-2 brutal-border bg-white font-mono focus:outline-none focus:ring-4 focus:ring-brutal-yellow"
                                             />
                                         </div>
@@ -293,7 +293,7 @@ const Settings = () => {
 
                             <div className="space-y-3">
                                 {[
-                                    { name: 'Andres Lopez', email: 'andres@email.com', role: 'Owner', isYou: true },
+                                    { name: 'Andres Borja', email: 'andres@proton.dev', role: 'Owner', isYou: true },
                                     { name: 'María García', email: 'maria@email.com', role: 'Admin', isYou: false },
                                     { name: 'Carlos Ruiz', email: 'carlos@email.com', role: 'Developer', isYou: false }
                                 ].map((member, i) => (

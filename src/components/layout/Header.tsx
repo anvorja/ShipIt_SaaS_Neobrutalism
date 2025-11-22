@@ -85,8 +85,8 @@ export const Header = ({ currentSpend = '$4.32', onToggleSidebar }: HeaderProps)
                                 {/* Dropdown Menu */}
                                 <div className="absolute right-0 mt-2 w-48 bg-white text-black border-4 border-black shadow-lg z-50">
                                     <div className="p-3 border-b-2 border-black">
-                                        <p className="font-bold text-sm">Andres Lopez</p>
-                                        <p className="text-xs text-gray-600">andres@email.com</p>
+                                        <p className="font-bold text-sm">Andres Borja</p>
+                                        <p className="text-xs text-gray-600">andres@proton.dev</p>
                                     </div>
                                     <div className="py-2">
                                         <Link

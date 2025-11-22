@@ -99,7 +99,7 @@ const Dashboard = () => {
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-muted-foreground">Branch:</span>
-                                    <span className="font-mono">{project.branch} → {project.environment}</span>
+                                    <span className="font-mono">{project.branch} &rarr; {project.environment}</span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-muted-foreground">Build time:</span>

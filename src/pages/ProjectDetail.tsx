@@ -73,7 +73,7 @@ const ProjectDetail = () => {
                     <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
                             <h1 className="text-3xl md:text-4xl font-black">my-api-project</h1>
-                            <Badge status="success">On Live</Badge>
+                            <Badge status="success"> ✓ Live</Badge>
                         </div>
                         <a
                             href="https://github.com/user/my-api"
@@ -82,7 +82,7 @@ const ProjectDetail = () => {
                             className="flex items-center gap-2 text-sm hover:underline text-muted-foreground"
                         >
                             <Github size={16} />
-                            github.com/user/my-api
+                            github.com/anvorja/my-api
                         </a>
                     </div>
 
@@ -203,7 +203,7 @@ const ProjectDetail = () => {
                                             <td className="p-3 font-mono text-sm">{deploy.branch}</td>
                                             <td className="p-3">
                                                 <Badge status={deploy.status}>
-                                                    {deploy.status === 'success' ? 'âœ“' : 'âœ—'}
+                                                    {deploy.status === 'success' ? '✓' : '✗'}
                                                 </Badge>
                                             </td>
                                             <td className="p-3 font-mono text-sm">{deploy.time}</td>
@@ -244,7 +244,7 @@ const ProjectDetail = () => {
                                         <p className="text-sm text-muted-foreground">GitHub</p>
                                     </div>
                                 </div>
-                                <div className="text-2xl font-black">â†’</div>
+                                <div className="text-2xl font-black">&rarr;</div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-16 h-16 brutal-border bg-brutal-green flex items-center justify-center font-black text-2xl">
                                         2
@@ -254,7 +254,7 @@ const ProjectDetail = () => {
                                         <p className="text-sm text-muted-foreground">pytest</p>
                                     </div>
                                 </div>
-                                <div className="text-2xl font-black">↑</div>
+                                <div className="text-2xl font-black">&rarr;</div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-16 h-16 brutal-border bg-brutal-yellow flex items-center justify-center font-black text-2xl">
                                         3
@@ -264,7 +264,7 @@ const ProjectDetail = () => {
                                         <p className="text-sm text-muted-foreground">Docker</p>
                                     </div>
                                 </div>
-                                <div className="text-2xl font-black">→</div>
+                                <div className="text-2xl font-black">&rarr;</div>
                                 <div className="flex items-center gap-4">
                                     <div className="w-16 h-16 brutal-border bg-brutal-red flex items-center justify-center font-black text-2xl">
                                         4

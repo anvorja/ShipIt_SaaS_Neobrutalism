@@ -6,7 +6,7 @@ const AuthProvider = ({ children }) => {
     // Mock: asumimos que el usuario está siempre logueado para desarrollo
     const [isLoggedIn] = useState(true);
     const [user] = useState({
-        name: 'Andres Lopez',
+        name: 'Andresx Lopez',
         email: 'andres@email.com'
     });
 
