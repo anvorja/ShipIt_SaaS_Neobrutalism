@@ -31,3 +31,6 @@ docs/
 # Archivos del build local (si los hay)
 dist
 build
+
+backup_project_files_script.sh
+.backup_project_files_script.*
