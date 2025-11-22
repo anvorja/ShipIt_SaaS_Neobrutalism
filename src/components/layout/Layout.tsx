@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
+import { Footer } from './Footer';
 import * as React from "react";
 
 interface LayoutProps {
@@ -13,12 +14,12 @@ export const Layout = ({ children, showSidebar = true }: LayoutProps) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background flex flex-col">
             <Header
                 onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
             />
 
-            <div className="flex">
+            <div className="flex flex-1">
                 {showSidebar && (
                     <Sidebar
                         isOpen={isSidebarOpen}
@@ -30,6 +31,8 @@ export const Layout = ({ children, showSidebar = true }: LayoutProps) => {
                     {children}
                 </main>
             </div>
+
+            <Footer />
         </div>
     );
 };

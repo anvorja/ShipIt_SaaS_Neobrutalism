@@ -33,7 +33,7 @@ export const Header = ({ currentSpend = '$4.32', onToggleSidebar }: HeaderProps)
                     </button>
 
                     {/* Logo */}
-                    <Link to="/app/dashboard" className="flex items-center gap-2 hover:text-brutal-yellow transition-colors">
+                    <Link to="/" className="flex items-center gap-2 hover:text-brutal-yellow transition-colors">
                         <Rocket className="fill-white" size={24} />
                         <span className="text-xl font-black hidden sm:inline">ShipIt</span>
                     </Link>
