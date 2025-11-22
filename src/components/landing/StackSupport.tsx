@@ -226,6 +226,129 @@
 //
 // export default StackSupport;
 
+// // src/components/landing/StackSupport.tsx
+// import {
+//     siPython, siNodedotjs, siReact, siGo, siRust, siVuedotjs,
+//     siTypescript, siRuby, siPhp,
+//     siDocker, siKubernetes, siMongodb,
+//     siRedis, siNextdotjs, siDjango, siPostgresql,
+//     siAngular, siLaravel, siFastapi
+// } from 'simple-icons';
+// import type { SimpleIcon } from 'simple-icons';
+//
+// const StackSupport = () => {
+//     const topRowStacks = [
+//         { name: 'Python', icon: siPython },
+//         { name: 'Node.js', icon: siNodedotjs },
+//         { name: 'React', icon: siReact },
+//         { name: 'Go', icon: siGo },
+//         { name: 'Rust', icon: siRust },
+//         { name: 'Vue', icon: siVuedotjs },
+//         { name: 'TypeScript', icon: siTypescript },
+//         { name: 'Ruby', icon: siRuby },
+//         { name: 'FastAPI', icon: siFastapi },
+//         { name: 'PHP', icon: siPhp },
+//     ];
+//
+//     const bottomRowStacks = [
+//         { name: 'Docker', icon: siDocker },
+//         { name: 'Kubernetes', icon: siKubernetes },
+//         { name: 'MongoDB', icon: siMongodb },
+//         { name: 'Redis', icon: siRedis },
+//         { name: 'Next.js', icon: siNextdotjs },
+//         { name: 'Django', icon: siDjango },
+//         { name: 'Postgres', icon: siPostgresql },
+//         { name: 'Angular', icon: siAngular },
+//         { name: 'Laravel', icon: siLaravel },
+//     ];
+//
+//     // Duplicamos 3 veces para un loop perfecto
+//     const topRowInfinite = [...topRowStacks, ...topRowStacks, ...topRowStacks];
+//     const bottomRowInfinite = [...bottomRowStacks, ...bottomRowStacks, ...bottomRowStacks];
+//
+//     // Componente SVG reutilizable con tipo correcto
+//     const TechIcon = ({ icon, size = 64 }: { icon: SimpleIcon; size?: number }) => (
+//         <svg
+//             width={size}
+//             height={size}
+//             viewBox="0 0 24 24"
+//             className="drop-shadow-md"
+//             fill={`#${icon.hex}`}
+//             dangerouslySetInnerHTML={{ __html: icon.svg }}
+//         />
+//     );
+//
+//     return (
+//         <section className="py-16 md:py-24 px-4 sm:px-6 bg-black text-white overflow-hidden">
+//             <div className="max-w-7xl mx-auto">
+//                 {/* Header */}
+//                 <div className="text-center mb-8 md:mb-16">
+//                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6">
+//                         Whatever your stack,
+//                         <br />
+//                         <span className="inline-block mt-2">it runs on ShipIt.</span>
+//                     </h2>
+//                     <p className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+//                         Auto-detect your tech stack. No config required.
+//                     </p>
+//                 </div>
+//
+//                 {/* Carrusel Superior - derecha */}
+//                 <div className="relative mb-3 md:mb-8">
+//                     <div className="overflow-hidden">
+//                         <div className="flex animate-scroll-right-mobile md:animate-scroll-right gap-2 sm:gap-3 md:gap-6">
+//                             {topRowInfinite.map((stack, index) => (
+//                                 <div key={`top-${index}`} className="flex-shrink-0">
+//                                     <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 bg-white brutal-border brutal-shadow-yellow brutal-hover flex flex-col items-center justify-center gap-1 p-1 sm:p-2">
+//                                         <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center">
+//                                             <TechIcon icon={stack.icon} size={48} />
+//                                         </div>
+//                                         <span className="text-[10px] sm:text-xs md:text-sm font-bold text-black leading-tight text-center px-0.5">
+//                                             {stack.name}
+//                                         </span>
+//                                     </div>
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+//                 </div>
+//
+//                 {/* Carrusel Inferior - izquierda */}
+//                 <div className="relative">
+//                     <div className="overflow-hidden">
+//                         <div className="flex animate-scroll-left-mobile md:animate-scroll-left gap-2 sm:gap-3 md:gap-6">
+//                             {bottomRowInfinite.map((stack, index) => (
+//                                 <div key={`bottom-${index}`} className="flex-shrink-0">
+//                                     <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 bg-white brutal-border brutal-shadow-cyan brutal-hover flex flex-col items-center justify-center gap-1 p-1 sm:p-2">
+//                                         <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-18 lg:h-18 flex items-center justify-center">
+//                                             <TechIcon icon={stack.icon} size={48} />
+//                                         </div>
+//                                         <span className="text-[10px] sm:text-xs md:text-sm font-bold text-black leading-tight text-center px-0.5">
+//                                             {stack.name}
+//                                         </span>
+//                                     </div>
+//                                 </div>
+//                             ))}
+//                         </div>
+//                     </div>
+//                 </div>
+//
+//                 {/* CTA */}
+//                 <div className="text-center mt-8 md:mt-16">
+//                     <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+//                         Don't see yours? <span className="text-brutal-yellow">We'll add it.</span>
+//                     </p>
+//                     <p className="text-base sm:text-lg text-gray-400">
+//                         Custom stacks supported. Just ask.
+//                     </p>
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// };
+//
+// export default StackSupport;
+
 // src/components/landing/StackSupport.tsx
 import {
     siPython, siNodedotjs, siReact, siGo, siRust, siVuedotjs,
@@ -262,9 +385,9 @@ const StackSupport = () => {
         { name: 'Laravel', icon: siLaravel },
     ];
 
-    // Duplicamos 3 veces para un loop perfecto
-    const topRowInfinite = [...topRowStacks, ...topRowStacks, ...topRowStacks];
-    const bottomRowInfinite = [...bottomRowStacks, ...bottomRowStacks, ...bottomRowStacks];
+    // Duplicamos 2 veces para un loop perfecto
+    const topRowInfinite = [...topRowStacks, ...topRowStacks];
+    const bottomRowInfinite = [...bottomRowStacks, ...bottomRowStacks];
 
     // Componente SVG reutilizable con tipo correcto
     const TechIcon = ({ icon, size = 64 }: { icon: SimpleIcon; size?: number }) => (
