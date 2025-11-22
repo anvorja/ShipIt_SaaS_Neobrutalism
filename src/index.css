@@ -376,11 +376,11 @@
 }
 /* Mobile: animaciones más rápidas para carousel */
 .animate-scroll-right-mobile {
-    animation: scroll-right 20s linear infinite;
+    animation: scroll-right 10s linear infinite;
 }
 
 .animate-scroll-left-mobile {
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 15s linear infinite;
 }
 
 /* Desktop: override con animaciones normales */
