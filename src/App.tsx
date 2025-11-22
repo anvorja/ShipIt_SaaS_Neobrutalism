@@ -11,7 +11,7 @@ import ProjectsProvider from "./components/providers/ProjectsProvider";
 import BillingProvider from "./components/providers/BillingProvider";
 
 // Pages
-import Index from "./pages/Index";
+import LandingPage from "./pages/LandingPage.tsx";
 import Dashboard from "./pages/Dashboard";
 import ProjectDetail from "./pages/ProjectDetail";
 import LogsViewer from "./pages/LogsViewer";
@@ -19,49 +19,42 @@ import Billing from "./pages/Billing";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
-// Layout
-import Layout from "./components/layout/Layout";
-
 // Hooks
 import { useAuth } from "./hooks/useAuth";
+import * as React from "react";
 
 const queryClient = new QueryClient();
 
 // Protected Route Component
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
     const { isLoggedIn } = useAuth();
 
     if (!isLoggedIn) {
         return <Navigate to="/" replace />;
     }
 
-    return children;
+    return <>{children}</>;
 };
 
 const AppRoutes = () => {
     return (
         <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<LandingPage />} />
 
             {/* Protected App Routes */}
-            <Route
-                path="/app/*"
-                element={
-                    <ProtectedRoute>
-                        <Layout>
-                            <Routes>
-                                <Route path="dashboard" element={<Dashboard />} />
-                                <Route path="projects/:projectId" element={<ProjectDetail />} />
-                                <Route path="projects/:projectId/logs/:deployId" element={<LogsViewer />} />
-                                <Route path="billing" element={<Billing />} />
-                                <Route path="settings" element={<Settings />} />
-                                <Route path="*" element={<Navigate to="/app/dashboard" replace />} />
-                            </Routes>
-                        </Layout>
-                    </ProtectedRoute>
-                }
-            />
+            <Route path="/app/*" element={
+                <ProtectedRoute>
+                    <Routes>
+                        <Route path="dashboard" element={<Dashboard />} />
+                        <Route path="projects/:projectId" element={<ProjectDetail />} />
+                        <Route path="projects/:projectId/logs/:deployId" element={<LogsViewer />} />
+                        <Route path="billing" element={<Billing />} />
+                        <Route path="settings" element={<Settings />} />
+                        <Route path="*" element={<Navigate to="/app/dashboard" replace />} />
+                    </Routes>
+                </ProtectedRoute>
+            } />
 
             {/* Legacy routes redirect to /app/* */}
             <Route path="/dashboard" element={<Navigate to="/app/dashboard" replace />} />

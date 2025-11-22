@@ -1,4 +1,4 @@
-// src/components/HowItWorks.tsx
+// src/components/landing/HowItWorks.tsx
 const HowItWorks = () => {
   const steps = [
     {

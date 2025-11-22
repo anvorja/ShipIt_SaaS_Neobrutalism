@@ -1,5 +1,5 @@
-// src/components/FinalCTA.tsx
-import { Button } from "@/components/ui/button";
+// src/components/landing/FinalCTA.tsx
+import { Button } from "@/components/ui/button.tsx";
 
 const FinalCTA = () => {
   return (
@@ -15,7 +15,7 @@ const FinalCTA = () => {
           size="lg" 
           className="brutal-border bg-background text-foreground hover:bg-muted brutal-shadow-green brutal-hover text-2xl px-16 py-10 h-auto font-bold rounded-none"
         >
-          Connect GitHub →
+          Connect GitHub &rarr;
         </Button>
         
         <p className="mt-8 text-xl text-muted-foreground">

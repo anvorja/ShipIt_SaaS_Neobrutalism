@@ -1,9 +1,16 @@
 // src/components/providers/BillingProvider.tsx
-import { createContext } from 'react';
+import { createContext, ReactNode } from 'react';
 
-const BillingContext = createContext({});
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface BillingContextType {}
 
-const BillingProvider = ({ children }) => {
+const BillingContext = createContext<BillingContextType>({});
+
+interface BillingProviderProps {
+    children: ReactNode;
+}
+
+const BillingProvider = ({ children }: BillingProviderProps) => {
     // Mock provider - la lógica real vendría aquí
     return (
         <BillingContext.Provider value={{}}>

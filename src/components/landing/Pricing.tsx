@@ -1,7 +1,7 @@
-// src/components/Pricing.tsx
+// src/components/landing/Pricing.tsx
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
+import { Button } from "@/components/ui/button.tsx";
+import { Slider } from "@/components/ui/slider.tsx";
 
 const Pricing = () => {
   const [buildTime, setBuildTime] = useState([5]);

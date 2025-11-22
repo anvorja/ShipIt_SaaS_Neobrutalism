@@ -1,4 +1,4 @@
-// src/components/Testimonials.tsx
+// src/components/landing/Testimonials.tsx
 const Testimonials = () => {
   const testimonials = [
     {

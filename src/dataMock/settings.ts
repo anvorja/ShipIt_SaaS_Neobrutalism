@@ -84,7 +84,7 @@ export const mockTeamMembers: TeamMember[] = [
     {
         id: '1',
         name: 'Andres Lopez',
-        email: 'andres@email.com',
+        email: 'andres.vorja@email.com',
         role: 'owner'
     },
     {

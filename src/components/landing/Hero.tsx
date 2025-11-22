@@ -1,5 +1,5 @@
-// src/components/Hero.tsx
-import { Button } from "@/components/ui/button";
+// src/components/landing/Hero.tsx
+import { Button } from "@/components/ui/button.tsx";
 
 const Hero = () => {
   return (
@@ -19,7 +19,7 @@ const Hero = () => {
           size="lg" 
           className="brutal-border bg-primary text-primary-foreground hover:bg-primary/90 brutal-shadow-yellow brutal-hover text-xl px-12 py-8 h-auto font-bold rounded-none"
         >
-          Connect GitHub →
+          Connect GitHub &rarr;
         </Button>
         
         <p className="mt-6 text-lg text-muted-foreground">
@@ -32,7 +32,7 @@ const Hero = () => {
             <p className="text-brutal-green">✓ Tests passed (23s)</p>
             <p className="text-brutal-green">✓ Build completed (1m 4s)</p>
             <p className="text-brutal-green">✓ Deployed to production</p>
-            <p>→ https://yourapp.com</p>
+            <p> &rarr; https://anvorja-app.dev</p>
             <p className="text-brutal-yellow mt-4">Cost: $0.08</p>
           </div>
         </div>

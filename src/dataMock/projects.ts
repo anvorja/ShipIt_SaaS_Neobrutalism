@@ -54,7 +54,7 @@ export const mockProjects: Project[] = [
         environment: 'production',
         buildTime: '4m 12s',
         cost: '$0.04',
-        repository: 'github.com/user/my-api'
+        repository: 'github.com/anvorja/my-api'
     },
     {
         id: '2',

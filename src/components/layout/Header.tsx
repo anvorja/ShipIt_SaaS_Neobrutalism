@@ -1,5 +1,5 @@
 // src/components/layout/Header.tsx
-import { Rocket, Menu, X, DollarSign } from 'lucide-react';
+import { Rocket, Menu, DollarSign } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 

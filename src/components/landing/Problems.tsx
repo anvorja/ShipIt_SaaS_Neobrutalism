@@ -1,4 +1,4 @@
-// src/components/Problems.tsx
+// src/components/landing/Problems.tsx
 const Problems = () => {
   const problems = [
     {
