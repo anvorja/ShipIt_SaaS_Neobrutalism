@@ -153,9 +153,9 @@ const StackSupport = () => {
             width={size}
             height={size}
             viewBox="0 0 24 24"
-            //fill="currentColor"
             className="drop-shadow-md"
             fill={`#${icon.hex}`}
+            //fill="black"
             dangerouslySetInnerHTML={{ __html: icon.svg }}
         />
     );
