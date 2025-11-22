@@ -1,3 +1,4 @@
+// src/pages/Index.tsx
 import Hero from "@/components/Hero";
 import Problems from "@/components/Problems";
 import Comparison from "@/components/Comparison";

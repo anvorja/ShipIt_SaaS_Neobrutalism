@@ -1,3 +1,4 @@
+// src/components/Problems.tsx
 const Problems = () => {
   const problems = [
     {

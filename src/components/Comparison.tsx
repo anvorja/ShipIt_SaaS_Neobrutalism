@@ -1,3 +1,4 @@
+// src/components/Comparison.tsx
 const Comparison = () => {
   return (
     <section className="py-20 px-6">
