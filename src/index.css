@@ -12,11 +12,11 @@
     /* Base colors - Brutalist palette */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
-    
+
     /* Primary colors - Pure, saturated */
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
-    
+
     /* Brutalist accent colors */
     --brutal-blue: 240 100% 50%;
     --brutal-red: 0 100% 50%;
@@ -24,36 +24,36 @@
     --brutal-yellow: 60 100% 50%;
     --brutal-magenta: 300 100% 50%;
     --brutal-cyan: 180 100% 50%;
-    
+
     /* Secondary */
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 0%;
-    
+
     /* Muted */
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 40%;
-    
+
     /* Accent */
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 0%;
-    
+
     /* Borders - Always black and thick */
     --border: 0 0% 0%;
     --input: 0 0% 0%;
     --ring: 0 0% 0%;
-    
+
     /* Destructive */
     --destructive: 0 100% 50%;
     --destructive-foreground: 0 0% 100%;
-    
+
     /* Card */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
-    
+
     /* Popover */
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
-    
+
     /* Brutalist specific */
     --border-width: 4px;
     --shadow-offset: 8px;
@@ -65,17 +65,17 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-family: 'JetBrains Mono', monospace;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 800;
   }
-  
+
   /* Noise texture on background */
   body::before {
     content: '';
@@ -95,41 +95,41 @@
   .brutal-shadow-blue {
     box-shadow: 8px 8px 0 hsl(var(--brutal-blue));
   }
-  
+
   .brutal-shadow-red {
     box-shadow: 8px 8px 0 hsl(var(--brutal-red));
   }
-  
+
   .brutal-shadow-green {
     box-shadow: 8px 8px 0 hsl(var(--brutal-green));
   }
-  
+
   .brutal-shadow-yellow {
     box-shadow: 8px 8px 0 hsl(var(--brutal-yellow));
   }
-  
+
   .brutal-shadow-magenta {
     box-shadow: 8px 8px 0 hsl(var(--brutal-magenta));
   }
-  
+
   .brutal-shadow-cyan {
     box-shadow: 8px 8px 0 hsl(var(--brutal-cyan));
   }
-  
+
   /* Brutalist borders */
   .brutal-border {
     border: 4px solid hsl(var(--border));
   }
-  
+
   /* Animation for hover effects */
   .brutal-hover {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
-  
+
   .brutal-hover:hover {
     transform: translate(-4px, -4px);
   }
-  
+
   .brutal-hover:active {
     transform: translate(0, 0);
   }
@@ -143,4 +143,46 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Infinite scrolling carousels - Brutalist edition */
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(-33.333%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll-right {
+    animation: scroll-right 35s linear infinite;
+}
+
+.animate-scroll-left {
+    animation: scroll-left 35s linear infinite;
+}
+
+/* Pausa al hacer hover - UX brutal pero útil */
+.animate-scroll-right:hover,
+.animate-scroll-left:hover {
+    animation-play-state: paused;
+}
+
+/* Opcional: más brutalidad al hover */
+.brutal-hover:hover {
+    transform: translate(-4px, -4px) !important;
+}
+
+.brutal-hover:active {
+    transform: translate(0, 0) !important;
 }

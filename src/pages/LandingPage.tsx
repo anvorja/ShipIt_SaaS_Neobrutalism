@@ -3,6 +3,7 @@ import Hero from "@/components/landing/Hero.tsx";
 import Problems from "@/components/landing/Problems.tsx";
 import Comparison from "@/components/landing/Comparison.tsx";
 import HowItWorks from "@/components/landing/HowItWorks.tsx";
+import StackSupport from "@/components/landing/StackSupport.tsx";
 import Testimonials from "@/components/landing/Testimonials.tsx";
 import Pricing from "@/components/landing/Pricing.tsx";
 import FinalCTA from "@/components/landing/FinalCTA.tsx";
@@ -15,6 +16,7 @@ const LandingPage = () => {
             <Problems />
             <Comparison />
             <HowItWorks />
+            <StackSupport />
             <Testimonials />
             <Pricing />
             <FinalCTA />
