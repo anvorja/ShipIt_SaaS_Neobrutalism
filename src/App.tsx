@@ -17,6 +17,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import LogsViewer from "./pages/LogsViewer";
 import Billing from "./pages/Billing";
 import Settings from "./pages/Settings";
+import Docs from "./pages/Docs";
 import NotFound from "./pages/NotFound";
 
 // Hooks
@@ -41,6 +42,7 @@ const AppRoutes = () => {
         <Routes>
             {/* Public Routes */}
             <Route path="/" element={<LandingPage />} />
+            <Route path="/docs" element={<Docs />} />
 
             {/* Protected App Routes */}
             <Route path="/app/*" element={

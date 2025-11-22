@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button.tsx";
 import { Slider } from "@/components/ui/slider.tsx";
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "@/hooks/useAuth.ts";
 
 const Pricing = () => {
   const [buildTime, setBuildTime] = useState([5]);
@@ -9,6 +11,14 @@ const Pricing = () => {
   
   const totalMinutes = buildTime[0] * deploys[0];
   const cost = Math.max(0, (totalMinutes - 100) * 0.01).toFixed(2);
+
+    const navigate = useNavigate();
+    const { login } = useAuth();
+
+    const handleStartFree = () => {
+        login();
+        navigate('/app/dashboard');
+    };
 
   return (
     <section className="py-20 px-6 bg-secondary">
@@ -71,6 +81,7 @@ const Pricing = () => {
           <Button 
             size="lg" 
             className="brutal-border bg-primary text-primary-foreground hover:bg-primary/90 brutal-shadow-yellow brutal-hover text-2xl px-16 py-10 h-auto font-bold rounded-none"
+            onClick={handleStartFree}
           >
             Start Free
           </Button>
