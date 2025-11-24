@@ -11,12 +11,17 @@ const AuthProvider = ({ children }) => {
         // Verificar si hay sesión demo activa
         const demoMode = localStorage.getItem('shipit_demo_mode');
         if (demoMode === 'true') {
-            setIsLoggedIn(true);
-            setUser({
-                name: 'Demo User',
-                email: 'demo@shipit.dev',
-                isDemo: true
-            });
+            // Usar setTimeout para hacer la actualización de estado asíncrona
+            const timer = setTimeout(() => {
+                setIsLoggedIn(true);
+                setUser({
+                    name: 'Demo User',
+                    email: 'demo@shipit.dev',
+                    isDemo: true
+                });
+            }, 0);
+
+            return () => clearTimeout(timer);
         }
     }, []);
 
